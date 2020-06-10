@@ -1,25 +1,25 @@
 html,
 body {
-    background-color: black;
-    scroll-behavior: smooth;
+  background-color: black;
+  scroll-behavior: smooth;
 }
 
 .title,
 .subtitle {
-    margin: 0.5rem !important;
+  margin: 0.5rem !important;
 }
 
 // Import a Google Font
-@import url('https://fonts.googleapis.com/css?family=Nunito');
-@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
 
 // Set your brand colors
-$purple: #8A4D76;
+$purple: #8a4d76;
 $green: #19ff19;
-$pink: #FA7C91;
+$pink: #fa7c91;
 $brown: #757763;
-$beige-light: #D0D1CD;
-$beige-lighter: #EFF0EB;
+$beige-light: #d0d1cd;
+$beige-lighter: #eff0eb;
 
 // Update Bulma's global variables
 $family-sans-serif: "Nunito", sans-serif;
@@ -49,223 +49,290 @@ $input-shadow: none;
 @import "resources/slick-theme.scss";
 
 a {
-    color: $green;
-    &:hover {
-        color: $pink;
-    }
+  color: $green;
+  &:hover {
+    color: $pink;
+  }
 }
 
 .navbar-brand {
-    a:hover {
-        color: $green !important;
-    }
+  a:hover {
+    color: $green !important;
+  }
 
-    a:active {
-        color: $pink !important;
-    }
+  a:active {
+    color: $pink !important;
+  }
 }
 
 .navbar-dropdown {
-    left: auto;
-    right: 0;
+  left: auto;
+  right: 0;
 }
 
 #navMenu {
-    text-align: center;
-    a:hover {
-        color: $green !important;
-    }
+  text-align: center;
+  a:hover {
+    color: $green !important;
+  }
 
-    a:active {
-        color: $purple !important;
-    }
+  a:active {
+    color: $purple !important;
+  }
 }
 
 .navbar-item {
-    font-family: 'Press Start 2P', cursive;
-    font-size: 1rem;
+  font-family: "Press Start 2P", cursive;
+  font-size: 1rem;
 }
 
 .navbar-end {
-    a:hover {
-        background-color: #111111 !important
-    }
+  a:hover {
+    background-color: #111111 !important;
+  }
 }
 
 .hero {
-    z-index: 1;
-    border-bottom: 0.05rem solid grey;
+  z-index: 1;
+  border-bottom: 0.05rem solid grey;
 }
 
 .hero-body {
-    padding: 0;
+  padding: 0;
 }
 
 #bgvid {
-    position: absolute;
-    z-index: 0;
-    background-size: cover;
-    background-position: center;
-    transform: scale(3);
+  position: absolute;
+  z-index: 0;
+  background-size: cover;
+  background-position: center;
+  transform: scale(3);
 }
 
 .hero-video {
-    opacity: 0.25;
-    z-index: 1;
+  opacity: 0.25;
+  z-index: 1;
 }
 
 #hero {
-    position: relative;
-    z-index: 3;
-    margin-top: 1.5rem; 
-    .title {
-        font-family: 'Press Start 2P', cursive !important;
-        letter-spacing: 0.15vmax;
-    }
+  position: relative;
+  z-index: 3;
+  margin-top: 1.5rem;
+  .title {
+    font-family: "Press Start 2P", cursive !important;
+    letter-spacing: 0.15vmax;
+  }
+  img {
+    animation: glitch 1s infinite;
+  }
 }
 
 #hero-main {
-    z-index: 0;
-    background-image: url(/images/DSC07751.JPG);
-    position: absolute;
-    opacity: 0.25;
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-size: cover;
+  z-index: 0;
+  background-image: url(/images/DSC07751.JPG);
+  position: absolute;
+  opacity: 0.25;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
 }
 
 #logo {
-    border: 0.15rem solid white;
-    max-width: 15vmax;
-    border-radius: 50rem;
+  border: 0.15rem solid white;
+  max-width: 15vmax;
+  border-radius: 50rem;
 }
 
 #about {
-    .title{
-        font-family: 'Press Start 2P', cursive !important;
-    }
-    position: relative;
-    z-index: 1;
-    p {
-        margin: 1rem auto;
-    }
+  .title {
+    font-family: "Press Start 2P", cursive !important;
+  }
+  position: relative;
+  z-index: 1;
+  p {
+    margin: 1rem auto;
+  }
 
-    .hero-body {
-        z-index: 1;
-        margin: auto;
-    }
-    .container{
-        margin: auto 0.5rem;
-    }
+  .hero-body {
+    z-index: 1;
+    margin: auto;
+  }
+  .container {
+    margin: auto 0.5rem;
+  }
 }
 
 .about {
-    background-image: url(/images/DSC07642.JPG);
-    position: absolute;
-    opacity: 0.15;
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-size: cover;
+  background-image: url(/images/DSC07642.JPG);
+  position: absolute;
+  opacity: 0.15;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
 }
 
+@keyframes glitch {
+  0% {
+    filter: blur(3px);
+  }
+  10% {
+    filter: blur(0);
+  }
+  20% {
+    filter: blur(5px);
+  }
+  30% {
+    filter: blur(0);
+  }
+  40% {
+    filter: blur(9px);
+  }
+  50% {
+    filter: blur(0);
+  }
+  60% {
+    filter: blur(2px);
+  }
+  70% {
+    filter: blur(0);
+  }
+  80% {
+    filter: blur(3px);
+  }
+  90% {
+    filter: blur(8px);
+  }
+  100% {
+    filter: blur(0);
+  }
+}
+.gallery {
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 1rem;
+  overflow: hidden;
+  height: 550px;
+  width: 1050px;
+  background-size: cover;
+  background-position: center;
+}
+.gallery-image {
+  display: flex;
+  margin: 7.5rem 1.5rem;
+  max-width: 200vmax;
+  background-color: #fff;
+  border: 1px solid #eee;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  width: 300px;
+  z-index: 1000;
+  cursor: pointer;
+  &:hover {
+    animation: glitch 2s infinite;
+  }
+}
 
 #team {
-    .title {
-        font-family: 'Press Start 2P', cursive !important;
-    }
-    .hero-body {
-        z-index: 1;
-        margin: auto;
-    }
-    .container{
-        margin: auto 0.5rem;
-    }
+  .title {
+    font-family: "Press Start 2P", cursive !important;
+  }
+  .hero-body {
+    z-index: 1;
+    margin: auto;
+  }
+  .container {
+    margin: auto 0.5rem;
+  }
 }
 
 .team {
-    background-image: url(/images/DSC07890.JPG);
-    position: absolute;
-    opacity: 0.15;
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-size: cover;
+  background-image: url(/images/DSC07890.JPG);
+  position: absolute;
+  opacity: 0.15;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
 }
 
 .page-bg {
-    background-image: url(/images/DSC07751.JPG);
-    position: absolute;
-    opacity: 0.15;
-    height: 100%;
-    width: 100%;
-    background-size: cover;
-    background-position: center;
+  background-image: url(/images/DSC07751.JPG);
+  position: absolute;
+  opacity: 0.15;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
 }
 
 .footer {
-    font-family: 'Press Start 2P', cursive;
-    position: relative;
-    z-index: 1;
-    padding: 0.25rem;
-    .container {
-        padding: 0.5rem;
-        align-self: center;
+  font-family: "Press Start 2P", cursive;
+  position: relative;
+  z-index: 1;
+  padding: 0.25rem;
+  .container {
+    padding: 0.5rem;
+    align-self: center;
+  }
+
+  a {
+    color: white;
+
+    &:hover {
+      color: $green !important;
     }
 
-    a {
-        color: white;
-
-        &:hover {
-            color: $green !important;
-        }
-
-        &:active {
-            color: $pink !important;
-        }
+    &:active {
+      color: $pink !important;
     }
+  }
 }
 
-#copyright{
-    padding: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.15rem;
+#copyright {
+  padding: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
 }
 
 #contact {
-    width: 75vw;
-    margin: 0.25rem auto;
+  width: 75vw;
+  margin: 0.25rem auto;
 }
 
-#faq, #coc, #gallery, #eventsec {
-    font-size: 1.25rem;
-    .title {
-        font-family: 'Press Start 2P', cursive !important;
-        color: $green;
+#faq,
+#coc,
+#gallery,
+#eventsec {
+  font-size: 1.25rem;
+  .title {
+    font-family: "Press Start 2P", cursive !important;
+    color: $green;
+  }
+  .content {
+    text-align: justify;
+    margin: 5rem 5vmax;
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
     }
-    .content {
-        text-align: justify;
-        margin: 5rem 5vmax;
-        h3 {
-            font-size: 1.5rem;
-            font-weight: 700;
-        }
-        blockquote {
-            &::before{
-                content: ">";
-                margin-right: 0.5rem;
-                font-family: 'Press Start 2P', cursive !important;
-            }
-            background-color: rgba($color: $green, $alpha: 0.10);
-            padding: 0.75rem 1rem;
-            border: 1px solid rgba($color: white, $alpha: 0.5);
-            margin-top: 0.5vmax;
-            margin-bottom: 2.5vmax;
-            display: inline-flex;
-        }
-        strong {
-            color: white;
-        }
+    blockquote {
+      &::before {
+        content: ">";
+        margin-right: 0.5rem;
+        font-family: "Press Start 2P", cursive !important;
+      }
+      background-color: rgba($color: $green, $alpha: 0.1);
+      padding: 0.75rem 1rem;
+      border: 1px solid rgba($color: white, $alpha: 0.5);
+      margin-top: 0.5vmax;
+      margin-bottom: 2.5vmax;
+      display: inline-flex;
     }
+    strong {
+      color: white;
+    }
+  }
 }
